@@ -1,0 +1,100 @@
+
+html
+{
+  height: 100%;
+  width: 100%;
+}
+
+body
+{
+  height: 100%;
+  width: 100%;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  font-family: "Open Sans", sans-serif;
+}
+
+#header_box
+{
+  position: relative;
+  height: 720px;
+  background-image: url("../images/main_background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-attachment: fixed;
+}
+
+#logo
+{
+  width: 100%;
+  height: 100px;
+  background-image: url("../images/logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  animation-name: fade-in-top;
+  animation-duration: 2s;
+}
+
+h1
+{
+  color: #ccc;
+  font-size: 36px;
+}
+
+#introdution
+{
+  padding: 100px 0;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#dummy_animation
+{
+  position: relative;
+  animation-name: fade-in-left;
+  animation-duration: 1s;
+  margin-top: 20%;
+  animation-play-state: paused;
+}
+
+@keyframes fade-in-top
+{
+    0% {transform: translateY(-120px); opacity: 0;}
+    100% {transform: translateY(0px); opacity: 1;}
+}
+
+@keyframes fade-in-left
+{
+    0% {transform: translateX(-120px); opacity: 0;}
+    100% {transform: translateX(0px); opacity: 1;}
+}
+
+#transition_box
+{
+  width: 100%;
+  height: 1080px;
+  background-image: url("../images/transition.png");
+  background-position: center;
+  margin-top: -20%;
+}
+
+#anchor
+{
+  height: 2000px;
+  background-color: #2c3346;
+}
+
+#dummy
+{
+  animation-name: fade-in-left;
+  animation-duration: 1s;
+  animation-play-state: paused;
+  color: white;
+}
