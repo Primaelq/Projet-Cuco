@@ -16,11 +16,49 @@ body
   font-family: "Open Sans", sans-serif;
 }
 
+#floating_frame
+{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  visibility: hidden;
+  animation-duration: 1s;
+}
+
+#close_button
+{
+  width: 50px;
+  height: 50px;
+  background-image: url("../images/close_button.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  float: right;
+  margin-right: 25px;
+  margin-top: 25px;
+  transition-duration: 0.2s;
+}
+
+#close_button:hover
+{
+  background-size: 100%;
+}
+
+iframe
+{
+  width: 90%;
+  height: 90%;
+  margin-left: 5%;
+  margin-top: 5%;
+  background-color: white;
+  position: absolute;
+}
+
 #header_box
 {
-  position: relative;
-  height: 720px;
-  background-image: url("../images/main_background.jpg");
+  height: 100%;
+  background-image: url("../images/main_background.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
@@ -43,7 +81,7 @@ body
 
 h1
 {
-  color: #ccc;
+  color: #ccc;w
   font-size: 36px;
 }
 
@@ -55,19 +93,22 @@ h1
   text-align: center;
 }
 
-#dummy_animation
-{
-  position: relative;
-  animation-name: fade-in-left;
-  animation-duration: 1s;
-  margin-top: 20%;
-  animation-play-state: paused;
-}
-
 @keyframes fade-in-top
 {
     0% {transform: translateY(-120px); opacity: 0;}
     100% {transform: translateY(0px); opacity: 1;}
+}
+
+@keyframes fade-in-bottom
+{
+    0% {transform: translateY(500px); opacity: 0;}
+    100% {transform: translateY(0px); opacity: 1;}
+}
+
+@keyframes fade-out-bottom
+{
+    0% {transform: translateY(0px); opacity: 1;}
+    100% {transform: translateY(500px); opacity: 0;}
 }
 
 @keyframes fade-in-left
@@ -76,25 +117,85 @@ h1
     100% {transform: translateX(0px); opacity: 1;}
 }
 
-#transition_box
+#footer_box
 {
+  height: 75%;
+  background-image: url("../images/blured_background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-attachment: fixed;
+
+  display: grid;
+  grid-template-columns: 10% 20% 20% 20% 20% 10%;
+  grid-template-rows: 25% 50% 25%;
+}
+
+#chapter_1
+{
+  background-image: url("../images/chapter_1.png");
+  grid-column: 2;
+  grid-row: 2;
   width: 100%;
-  height: 1080px;
-  background-image: url("../images/transition.png");
-  background-position: center;
-  margin-top: -20%;
-}
-
-#anchor
-{
-  height: 2000px;
-  background-color: #2c3346;
-}
-
-#dummy
-{
-  animation-name: fade-in-left;
+  height: 100%;
+  animation-name: fade-in-top;
   animation-duration: 1s;
   animation-play-state: paused;
-  color: white;
+}
+
+#chapter_2
+{
+  background-image: url("../images/chapter_2.png");
+  grid-column: 3;
+  grid-row: 2;
+  width: 100%;
+  height: 100%;
+  animation-name: fade-in-top;
+  animation-duration: 1s;
+  animation-play-state: paused;
+}
+
+#chapter_3
+{
+  background-image: url("../images/chapter_3.png");
+  grid-column: 4;
+  grid-row: 2;
+  width: 100%;
+  height: 100%;
+  animation-name: fade-in-top;
+  animation-duration: 1s;
+  animation-play-state: paused;
+}
+
+#chapter_4
+{
+  background-image: url("../images/chapter_4.png");
+  grid-column: 5;
+  grid-row: 2;
+  width: 100%;
+  height: 100%;
+  animation-name: fade-in-top;
+  animation-duration: 1s;
+  animation-play-state: paused;
+}
+
+.chapter
+{
+  transition: 0.1s ease;
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.chapter:hover
+{
+  background-size: 90%;
+  opacity: 0.75;
+}
+
+footer
+{
+  background-color: rgb(50, 50, 50);
+  width: 100%;
+  height: 4%;
 }
