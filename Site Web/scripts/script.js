@@ -3,7 +3,7 @@ $(document).ready(function()
   $(".chapter").click(function()
   {
     $(".chapter").css({"visibility" : "hidden"});
-    $("#main_frame").attr('src', "index.html");
+    $("#main_frame").attr('src', "chapters/" + this.id + ".html");
 
     $("#floating_frame").css({"animation-name" : "fade-in-bottom"});
     $("#floating_frame").css({"visibility" : "visible"});
