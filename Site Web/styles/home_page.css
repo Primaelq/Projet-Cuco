@@ -13,6 +13,8 @@ body
   padding: 0 !important;
 
   font-family: "Open Sans", sans-serif;
+
+  background-color: rgb(50, 50, 50);
 }
 
 #floating_frame
@@ -26,7 +28,7 @@ body
   z-index: 5;
 }
 
-#close_button
+.close
 {
   width: 50px;
   height: 50px;
@@ -40,7 +42,26 @@ body
   transition-duration: 0.2s;
 }
 
-#close_button:hover
+.close:hover
+{
+  background-size: 100%;
+}
+
+#close_button_source
+{
+  width: 50px;
+  height: 50px;
+  background-image: url("../images/close_button.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: 60%;
+  margin-top: 10px;
+  background-size: 80%;
+  transition-duration: 0.2s;
+  grid-column: 4;
+}
+
+#close_button_source:hover
 {
   background-size: 100%;
 }
@@ -54,6 +75,72 @@ iframe
   background-color: white;
   position: absolute;
   border: 0;
+}
+
+#conclusion_panel
+{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  visibility: hidden;
+  animation-duration: 1s;
+  z-index: 5;
+}
+
+#conclusion_panel > div
+{
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
+#conclusion_content
+{
+  width: 60%;
+  height: 80%;
+  margin-left: 20%;
+  padding-top: 10%;
+}
+
+#sources_panel
+{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  visibility: hidden;
+  animation-duration: 1s;
+  z-index: 5;
+}
+
+#sources_panel > div
+{
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  margin-left: 10%;
+  margin-top: 5%;
+  display: grid;
+  grid-template-columns: 10% 40% 40% 10%;
+}
+
+#bibliographie
+{
+  margin-top: 10%;
+  grid-column: 2;
+  width: 80%;
+  height: 80%;
+}
+
+#image_src
+{
+  margin-top: 10%;
+  grid-column: 3;
+  width: 80%;
+  height: 80%;
 }
 
 #header_box
@@ -83,8 +170,13 @@ iframe
 
 h1
 {
-  color: #ccc;w
+  color: #ccc;
   font-size: 36px;
+}
+
+p
+{
+  color: #ccc;
 }
 
 #introdution
@@ -130,7 +222,7 @@ h1
 
   display: grid;
   grid-template-columns: 10% 20% 20% 20% 20% 10%;
-  grid-template-rows: 25% 50% 25%;
+  grid-template-rows: 10% 50% 35%;
 }
 
 #chapter_1
@@ -181,6 +273,24 @@ h1
   animation-play-state: paused;
 }
 
+#conclusion
+{
+  background-image: url("../images/conclusion.png");
+  background-size: 25%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.1s ease;
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row: 3;
+}
+
+#conclusion:hover
+{
+  background-size: 28%;
+  opacity: 0.75;
+}
+
 .chapter
 {
   transition: 0.1s ease;
@@ -200,4 +310,18 @@ footer
   background-color: rgb(50, 50, 50);
   width: 100%;
   height: 4%;
+}
+
+#sources_button
+{
+  padding: 0;
+  margin: 0;
+  color: white;
+  float: right;
+  margin-right: 2%;
+}
+
+#sources_button:hover
+{
+  opacity: 0.5;
 }

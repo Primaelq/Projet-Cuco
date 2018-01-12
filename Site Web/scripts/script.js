@@ -16,12 +16,43 @@ $(document).ready(function()
     setTimeout(function ()
     {
       $("#floating_frame").css({"visibility" : "hidden"});
+      $("#conclusion_panel").css({"visibility" : "hidden"});
+    }, 800);
+  });
+
+  $("#sources_button").click(function()
+  {
+    $("#sources_panel").css({"animation-name" : "fade-in-bottom"});
+    $("#sources_panel").css({"visibility" : "visible"});
+  });
+
+  $("#conclusion").click(function()
+  {
+    $("#conclusion_panel").css({"animation-name" : "fade-in-bottom"});
+    $("#conclusion_panel").css({"visibility" : "visible"});
+  });
+
+  $("#close_button_source").click(function()
+  {
+    $("#sources_panel").css({"animation-name" : "fade-out-bottom"});
+    setTimeout(function ()
+    {
+      $("#sources_panel").css({"visibility" : "hidden"});
+    }, 800);
+  });
+
+  $("#close_button_conclusion").click(function()
+  {
+    $("#conclusion_panel").css({"animation-name" : "fade-out-bottom"});
+    setTimeout(function ()
+    {
+      $("#conclusion_panel").css({"visibility" : "hidden"});
     }, 800);
   });
 });
 
 // Animations Trigger Spots
-var chapters_trigger = 85;
+var chapters_trigger = 76;
 
 $(window).scroll(function()
 {
